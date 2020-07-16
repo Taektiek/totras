@@ -1,18 +1,13 @@
-# Tetromino (a Tetris clone)
-# By Al Sweigart al@inventwithpython.com
-# http://inventwithpython.com/pygame
-# Released under a "Simplified BSD" license
-
 import random, time, pygame, sys
 from random import randint
 from pygame.locals import *
 
 FPS = 25
 WINDOWWIDTH = 700
-WINDOWHEIGHT = 900
+WINDOWHEIGHT = 700
 BOXSIZE = 20
 BOARDWIDTH = 30
-BOARDHEIGHT = 40
+BOARDHEIGHT = 30
 BLANK = '.'
 
 MOVESIDEWAYSFREQ = 0.15
@@ -168,13 +163,13 @@ def main():
 
     showTextScreen('Totras')
     while True: # game loop
-        if random.randint(0, 1) == 0:
-            pygame.mixer.music.load('tetrisb.mid')
-        else:
-            pygame.mixer.music.load('tetrisc.mid')
-        pygame.mixer.music.play(-1, 0.0)
+#        if random.randint(0, 1) == 0:
+#            pygame.mixer.music.load('tetrisb.mid')
+#        else:
+#            pygame.mixer.music.load('tetrisc.mid')
+#        pygame.mixer.music.play(-1, 0.0)
         runGame()
-        pygame.mixer.music.stop()
+#        pygame.mixer.music.stop()
         showTextScreen('Game Over')
 
 
